@@ -6,6 +6,7 @@ import pandas as pd
 
 ###############################################################################
 # inputdirに格納されているExcelファイルに検索対象となる文字列が存在するかチェックする
+# ※検索対象のExcelファイルが開かれた状態だと正常に実行されない。（改善予定）
 ###############################################################################
 
 # 検索処理
@@ -91,4 +92,5 @@ scrollbar = tk.Scrollbar(frame,command=text_area.yview)
 scrollbar.pack(side=tk.RIGHT,fill=tk.Y)
 text_area.config(yscrollcommand=scrollbar.set)
 
+# tkinterでGUI操作実現するために必要。これ無いとウィンドウがすぐ消える
 app.mainloop()
